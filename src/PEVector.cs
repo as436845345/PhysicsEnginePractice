@@ -4,18 +4,18 @@ namespace PhysicsEngine;
 
 public struct PEVector
 {
-    public double X;
-    public double Y;
+    public float X;
+    public float Y;
 
     public PEVector() { }
 
-    public PEVector(double x, double y)
+    public PEVector(float x, float y)
     {
         X = x;
         Y = y;
     }
 
-    public readonly double Length => Math.Sqrt(X * X + Y * Y);
+    public readonly float Length => (float)Math.Sqrt(X * X + Y * Y);
 
     /// <summary>
     /// 归一化：sqrt(x^2+y^2) ≈ 1
@@ -54,7 +54,7 @@ public struct PEVector
         return v1 - v2;
     }
 
-    public static PEVector Scale(PEVector v, double scale)
+    public static PEVector Scale(PEVector v, float scale)
     {
         return new PEVector { X = v.X * scale, Y = v.Y * scale };
     }
@@ -74,6 +74,6 @@ public static class PEVectorExtensions
 {
     public static SKPoint ToSKPoint(this PEVector v)
     {
-        return new SKPoint((float)v.X, (float)v.Y);
+        return new SKPoint(v.X, v.Y);
     }
 }

@@ -5,8 +5,8 @@ namespace PhysicsEngine.UnitTests;
 public class MatrixHelperTests
 {
     [Theory]
-    [InlineData(2, 2, 3, 0, -(float.Pi / 4))]
-    public void CalculateRotationRadian_ReturnsNegative45DegreesInRadians(double startX, double startY, double endX, double endY, float expected)
+    [InlineData(2f, 2f, 3f, 0, -(float.Pi / 4))]
+    public void CalculateRotationRadian_ReturnsNegative45DegreesInRadians(float startX, float startY, float endX, float endY, float expected)
     {
         var start = new PEVector(startX, startY);
         var end = new PEVector(endX, endY);

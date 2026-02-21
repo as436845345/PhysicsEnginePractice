@@ -17,7 +17,7 @@ public sealed class LineSegment : Shape
 
     public PEVector StartPos { get; }
     public PEVector EndPos { get; }
-    public PEVector Center => PEVector.Scale(StartPos + EndPos, 0.5);
+    public PEVector Center => PEVector.Scale(StartPos + EndPos, 0.5f);
 
     public bool ShowPoint { get; set; }
     public bool ShowArrow { get; set; }

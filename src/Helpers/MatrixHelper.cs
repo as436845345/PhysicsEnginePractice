@@ -23,8 +23,8 @@ public static class MatrixHelper
     {
         return new PEVector
         {
-            X = vector.X * Math.Cos(rotationRadian) - vector.Y * Math.Sin(rotationRadian),
-            Y = vector.X * Math.Sin(rotationRadian) + vector.Y * Math.Cos(rotationRadian),
+            X = (float)(vector.X * Math.Cos(rotationRadian) - vector.Y * Math.Sin(rotationRadian)),
+            Y = (float)(vector.X * Math.Sin(rotationRadian) + vector.Y * Math.Cos(rotationRadian)),
         };
     }
 
