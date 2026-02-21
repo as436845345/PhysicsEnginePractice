@@ -33,9 +33,25 @@ public struct PEVector
         Y += v.Y;
     }
 
+    public void Sub(PEVector v)
+    {
+        X -= v.X;
+        Y -= v.Y;
+    }
+
     public PEVector GetNormal()
     {
         return new PEVector { X = Y, Y = -X };
+    }
+
+    public static PEVector Add(PEVector v1, PEVector v2)
+    {
+        return v1 + v2;
+    }
+
+    public static PEVector Sub(PEVector v1, PEVector v2)
+    {
+        return v1 - v2;
     }
 
     public static PEVector Scale(PEVector v, double scale)
