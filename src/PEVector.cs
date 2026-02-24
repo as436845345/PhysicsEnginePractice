@@ -15,7 +15,15 @@ public struct PEVector
         Y = y;
     }
 
-    public readonly float Length => (float)Math.Sqrt(X * X + Y * Y);
+    /// <summary>
+    /// 向量的长度（模长）
+    /// </summary>
+    public readonly float Length => (float)Math.Sqrt(SumOfSquares);
+
+    /// <summary>
+    /// 平方和
+    /// </summary>
+    public readonly float SumOfSquares => X * X + Y * Y;
 
     /// <summary>
     /// 归一化：sqrt(x^2+y^2) ≈ 1
