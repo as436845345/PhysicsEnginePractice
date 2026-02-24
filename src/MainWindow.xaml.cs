@@ -19,8 +19,10 @@ public partial class MainWindow : Window
             ShowArrow = true,
             //ShowPoint = true,
         };
-
         _shapes.Add(lineSegment);
+
+        var circle = new Circle([new PEVector(300, 300)], 50);
+        _shapes.Add(circle);
     }
 
     private void SKElement_PaintSurface(object sender, SkiaSharp.Views.Desktop.SKPaintSurfaceEventArgs e)

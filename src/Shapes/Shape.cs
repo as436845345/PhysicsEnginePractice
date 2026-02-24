@@ -2,9 +2,16 @@
 
 namespace PhysicsEngine.Shapes;
 
-public abstract class Shape(IList<PEVector> vectors)
+public abstract class Shape
 {
-    public IList<PEVector> Vectors { get; } = vectors;
+    protected Shape(IList<PEVector> vectors)
+    {
+        ArgumentNullException.ThrowIfNull(nameof(vectors));
+
+        Vectors = vectors;
+    }
+
+    public IList<PEVector> Vectors { get; }
 
     public abstract void Draw(SKCanvas canvas);
 

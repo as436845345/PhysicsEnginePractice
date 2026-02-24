@@ -6,10 +6,8 @@ public sealed class LineSegment : Shape
 {
     public LineSegment(IList<PEVector> vectors) : base(vectors)
     {
-        ArgumentNullException.ThrowIfNull(nameof(vectors));
-
         if (vectors.Count < 2)
-            throw new ArgumentOutOfRangeException(nameof(vectors));
+            throw new ArgumentException(nameof(vectors));
 
         StartPos = vectors[0];
         EndPos = vectors[1];
